@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 function Footer() {
     return (
-      <div>Footer</div>
+      <div className="bg-sky-300">Footer</div>
     );
   }
   
