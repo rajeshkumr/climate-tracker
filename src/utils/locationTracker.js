@@ -1,4 +1,4 @@
-export default async function locationTracker() {
+export default async function geoLocation() {
     return new Promise((resolve, reject) => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(resolve, reject);

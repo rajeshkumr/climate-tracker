@@ -1,15 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-import './css/style.css';
-import { Header, Main, Footer } from "./component";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import DashboardPage from "./pages/DashboardPage";
+import WeatherPage from "./pages/WeatherPage";
+import RoadHazardPage from "./pages/RoadHazardPage";
+
+import "./App.css";
+// import "./css/style.css";
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Main />
-      <Footer/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<DashboardPage />} />
+        <Route path="/weather" element={<WeatherPage />} />
+        <Route path="/hazard" element={<RoadHazardPage />} />
+      </Routes>
+    </Router>
   );
 }
 
